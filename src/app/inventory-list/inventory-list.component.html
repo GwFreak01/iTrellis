@@ -16,7 +16,7 @@
         </div>
         <div class="inventoryShipByDescription">
           <h4>
-            {{product.maxBusinessDaysToShip}}
+            {{product.maxBusinessDaysToShip | calculatedShipByDate: product.shipOnWeekends}}
           </h4>
         </div>
       </mat-panel-description>

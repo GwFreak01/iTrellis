@@ -9,6 +9,7 @@ import {NavigationComponent} from './navigation/navigation.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { InventoryListComponent } from './inventory-list/inventory-list.component';
+import { CalculatedShipByDatePipe } from './pipes/calculated-ship-by-date/calculated-ship-by-date.pipe';
 
 
 
@@ -18,6 +19,7 @@ import { InventoryListComponent } from './inventory-list/inventory-list.componen
     DashboardComponent,
     NavigationComponent,
     InventoryListComponent,
+    CalculatedShipByDatePipe,
   ],
   imports: [
     AppRoutingModule,

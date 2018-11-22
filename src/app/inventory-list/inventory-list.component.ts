@@ -70,4 +70,8 @@ export class InventoryListComponent implements OnInit {
   ngOnInit() {
   }
 
+  getCalculatedShipByDate(maxDays: number) {
+    return maxDays;
+  }
+
 }
