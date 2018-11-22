@@ -13,14 +13,14 @@ export class InventoryListComponent implements OnInit {
       'productName': 'fugiat exercitation adipisicing',
       'inventoryQuantity': 43,
       'shipOnWeekends': true,
-      'maxBusinessDaysToShip': 13
+      'maxBusinessDaysToShip': 3
     },
     {
       'productId': 2,
       'productName': 'mollit cupidatat Lorem',
       'inventoryQuantity': 70,
       'shipOnWeekends': true,
-      'maxBusinessDaysToShip': 18
+      'maxBusinessDaysToShip': 14
     },
     {
       'productId': 3,
@@ -62,16 +62,12 @@ export class InventoryListComponent implements OnInit {
       'productName': 'ex mollit laboris',
       'inventoryQuantity': 80,
       'shipOnWeekends': false,
-      'maxBusinessDaysToShip': 15
+      'maxBusinessDaysToShip': 5
     }
   ];
   constructor() { }
 
   ngOnInit() {
-  }
-
-  getCalculatedShipByDate(maxDays: number) {
-    return maxDays;
   }
 
 }
