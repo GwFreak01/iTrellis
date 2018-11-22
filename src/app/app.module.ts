@@ -10,6 +10,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { CalculatedShipByDatePipe } from './pipes/calculated-ship-by-date/calculated-ship-by-date.pipe';
 import { InventoryTableComponent } from './inventory-table/inventory-table.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -26,6 +27,7 @@ import { InventoryTableComponent } from './inventory-table/inventory-table.compo
     BrowserModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

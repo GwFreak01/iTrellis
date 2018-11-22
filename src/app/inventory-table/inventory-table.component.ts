@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import * as moment from 'moment';
 
 export interface InventoryElement {
   _id: string;
@@ -81,14 +82,24 @@ const inventoryList = [
     ]),
   ],
 })
-export class InventoryTableComponent implements OnInit {
+export class InventoryTableComponent implements OnInit, OnChanges {
   displayedColumns: string[] = ['productName', 'inventoryQuantity', 'maxBusinessDaysToShip'];
   dataSource = inventoryList;
   expandedProduct;
+  @Input()
+  date;
 
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.date);
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+    this.date = moment(changes.date.currentValue);
+  }
+
+
 
 }

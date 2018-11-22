@@ -9,9 +9,9 @@ export class CalculatedShipByDatePipe implements PipeTransform {
   private endDate;
   private count;
 
-  transform(maxBusinessDaysToShip: number, shipOnWeekends: boolean): any {
+  transform(maxBusinessDaysToShip: number, shipOnWeekends: boolean, date: Date): any {
     this.count = 0;
-    this.currentDate = moment();
+    this.currentDate = moment(date);
     this.endDate = this.currentDate;
     if (shipOnWeekends) {
 
