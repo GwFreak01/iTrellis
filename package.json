@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "body-parser": "^1.18.3",
+    "consolidate": "^0.15.1",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "handlebars": "^4.0.12",

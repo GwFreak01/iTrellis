@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const inventoryRoutes = require('./routes/inventories');
+const inventoriesRoutes = require('./routes/inventories');
 
 const app = express();
 
@@ -39,6 +39,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/api/inventory', inventoryRoutes);
+app.use('/api/inventories', inventoriesRoutes);
 module.exports = app;
 

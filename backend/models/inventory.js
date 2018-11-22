@@ -17,7 +17,7 @@ const inventorySchema = mongoose.Schema({
     required: true
   },
   shipOnWeekends: {
-    type: boolean,
+    type: Boolean,
     required: true
   },
   maxBusinessDaysToShip: {
