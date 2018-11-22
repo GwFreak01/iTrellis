@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+}
+
+tr.productDetailRow {
+  height: 0;
+}
+
+tr.productRow:not(.expandedRow):hover {
+  background: #f5f5f5;
+}
+
+tr.productRow:not(.expandedRow):active {
+  background: #efefef;
+}
+
+.productDetail {
+  overflow: hidden;
+  display: inline-flex;
+  padding: 8px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.productInfo {
+  width: 60%;
+
+}
+
+.buttonGroup {
+  padding: 8px;
+  margin: 8px 0;
+}

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MatButtonModule, MatExpansionModule,
+  MatButtonModule, MatCardModule, MatExpansionModule,
   MatGridListModule,
   MatIconModule,
   MatListModule,
   MatMenuModule, MatProgressSpinnerModule,
-  MatSidenavModule,
+  MatSidenavModule, MatTableModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -24,6 +24,8 @@ import {
     MatListModule,
     MatGridListModule,
     MatExpansionModule,
+    MatCardModule,
+    MatTableModule,
   ],
   declarations: []
 })

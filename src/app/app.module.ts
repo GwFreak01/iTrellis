@@ -8,8 +8,8 @@ import {AngularMaterialModule} from './angular-material/angular-material.module'
 import {NavigationComponent} from './navigation/navigation.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import { InventoryListComponent } from './inventory-list/inventory-list.component';
 import { CalculatedShipByDatePipe } from './pipes/calculated-ship-by-date/calculated-ship-by-date.pipe';
+import { InventoryTableComponent } from './inventory-table/inventory-table.component';
 
 
 
@@ -18,8 +18,8 @@ import { CalculatedShipByDatePipe } from './pipes/calculated-ship-by-date/calcul
     AppComponent,
     DashboardComponent,
     NavigationComponent,
-    InventoryListComponent,
     CalculatedShipByDatePipe,
+    InventoryTableComponent,
   ],
   imports: [
     AppRoutingModule,
