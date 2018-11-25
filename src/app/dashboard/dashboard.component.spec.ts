@@ -1,8 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
-import {MatDatepickerModule, MatFormFieldModule} from '@angular/material';
-import {ReactiveFormsModule} from '@angular/forms';
+import {
+  MatCardModule,
+  MatDatepickerModule,
+  MatFormFieldModule, MatGridListModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatSelectModule,
+  MatTableModule
+} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Component} from '@angular/core';
 
 @Component({selector: 'app-inventory-table', template: ''})
@@ -15,8 +23,15 @@ describe('DashboardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MatDatepickerModule, MatFormFieldModule, ReactiveFormsModule],
-      declarations: [ DashboardComponent, MockAppInventoryTableComponent ]
+        MatGridListModule,
+        MatCardModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatNativeDateModule,
+        MatInputModule,
+        MatSelectModule, MatTableModule, FormsModule],
+      declarations: [ DashboardComponent, MockAppInventoryTableComponent,  ]
     })
     .compileComponents();
   }));

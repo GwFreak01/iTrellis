@@ -10,8 +10,6 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
                  [(opened)]="opened">
       <mat-nav-list>
-        <a mat-button routerLink="" routerLinkActive="mat-accent">HOME</a>
-        <br>
         <a mat-button routerLink="/dashboard" routerLinkActive="mat-accent">DASHBOARD</a>
       </mat-nav-list>
 
@@ -24,13 +22,10 @@
         <router-outlet (activate)="onActivate($event)"></router-outlet>
 
       </div>
-      <!--GET OUT YOURE NOT LOGGED IN-->
 
     </mat-sidenav-content>
 
   </mat-sidenav-container>
-  <!--<footer class="footerContainer">-->
-  <!--<div class="footText">Copyright 2015-2016</div>-->
-  <!--</footer>-->
+
 </div>
 
