@@ -1,6 +1,7 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import * as moment from 'moment';
+import {InventoriesService} from '../services/inventories.service';
 
 export interface InventoryElement {
   _id: string;
@@ -11,65 +12,8 @@ export interface InventoryElement {
   maxBusinessDaysToShip: number;
 }
 
-const inventoryList = [
-  {
-    'productId': 1,
-    'productName': 'fugiat exercitation adipisicing',
-    'inventoryQuantity': 43,
-    'shipOnWeekends': true,
-    'maxBusinessDaysToShip': 3
-  },
-  {
-    'productId': 2,
-    'productName': 'mollit cupidatat Lorem',
-    'inventoryQuantity': 70,
-    'shipOnWeekends': true,
-    'maxBusinessDaysToShip': 14
-  },
-  {
-    'productId': 3,
-    'productName': 'non quis sint',
-    'inventoryQuantity': 33,
-    'shipOnWeekends': false,
-    'maxBusinessDaysToShip': 15
-  },
-  {
-    'productId': 4,
-    'productName': 'voluptate cupidatat non',
-    'inventoryQuantity': 52,
-    'shipOnWeekends': false,
-    'maxBusinessDaysToShip': 18
-  },
-  {
-    'productId': 5,
-    'productName': 'anim amet occaecat',
-    'inventoryQuantity': 39,
-    'shipOnWeekends': true,
-    'maxBusinessDaysToShip': 19
-  },
-  {
-    'productId': 6,
-    'productName': 'cillum deserunt elit',
-    'inventoryQuantity': 47,
-    'shipOnWeekends': false,
-    'maxBusinessDaysToShip': 20
-  },
-  {
-    'productId': 7,
-    'productName': 'adipisicing reprehenderit et',
-    'inventoryQuantity': 71,
-    'shipOnWeekends': false,
-    'maxBusinessDaysToShip': 15
-  },
-  {
-    'productId': 8,
-    'productName': 'ex mollit laboris',
-    'inventoryQuantity': 80,
-    'shipOnWeekends': false,
-    'maxBusinessDaysToShip': 5
-  }
-];
-
+// Can use InventoryService here to
+// subscribe to any new inventoryList updates
 @Component({
   selector: 'app-inventory-table',
   templateUrl: './inventory-table.component.html',
@@ -83,16 +27,19 @@ const inventoryList = [
   ],
 })
 export class InventoryTableComponent implements OnInit, OnChanges {
+  private inventoryList;
+  dataSource;
   displayedColumns: string[] = ['productName', 'inventoryQuantity', 'maxBusinessDaysToShip'];
-  dataSource = inventoryList;
   expandedProduct;
   @Input()
   date;
 
-  constructor() { }
+  constructor(private inventoriesService: InventoriesService) { }
 
   ngOnInit() {
-    window.localStorage.setItem('db', JSON.stringify(inventoryList));
+    this.inventoryList = this.inventoriesService.getInventories();
+    this.dataSource = this.inventoryList;
+    window.localStorage.setItem('db', JSON.stringify(this.inventoryList));
   }
 
   ngOnChanges(changes: SimpleChanges) {
