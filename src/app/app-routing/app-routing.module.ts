@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     component: NavigationComponent
   },
   {
-    path: 'dashboard',
+    path: 'inventory',
     component: DashboardComponent
   },
 ];

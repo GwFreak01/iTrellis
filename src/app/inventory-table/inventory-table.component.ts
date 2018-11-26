@@ -92,7 +92,7 @@ export class InventoryTableComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.date);
+    window.localStorage.setItem('db', JSON.stringify(inventoryList));
   }
 
   ngOnChanges(changes: SimpleChanges) {

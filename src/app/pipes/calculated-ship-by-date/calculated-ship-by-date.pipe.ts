@@ -14,7 +14,6 @@ export class CalculatedShipByDatePipe implements PipeTransform {
     this.currentDate = moment(date);
     this.endDate = this.currentDate;
     if (shipOnWeekends) {
-
       return (this.endDate.add(maxBusinessDaysToShip - 1, 'd').format('ddd MMM Do'));
     }
     else {

@@ -29,21 +29,19 @@
             <br>
             Ship By: {{product.maxBusinessDaysToShip | calculatedShipByDate: product.shipOnWeekends: date}}
           </div>
-          <mat-action-row class="buttonGroup">
-            <button
-              class="editCompanyButton"
-              mat-stroked-button color="primary">
-              EDIT
-            </button>
-            <button
-              class="deleteEventButton"
-              mat-stroked-button color="warn"
-              (click)="onDelete(product.productId)">
-              DELETE
-            </button>
-
-
-          </mat-action-row>
+          <!--<mat-action-row class="buttonGroup">-->
+            <!--<button-->
+              <!--class="editCompanyButton"-->
+              <!--mat-stroked-button color="primary">-->
+              <!--EDIT-->
+            <!--</button>-->
+            <!--<button-->
+              <!--class="deleteEventButton"-->
+              <!--mat-stroked-button color="warn"-->
+              <!--(click)="onDelete(product.productId)">-->
+              <!--DELETE-->
+            <!--</button>-->
+          <!--</mat-action-row>-->
         </div>
       </td>
     </ng-container>

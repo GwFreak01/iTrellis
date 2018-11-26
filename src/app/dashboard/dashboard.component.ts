@@ -15,15 +15,11 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.date);
   }
 
   setSelectedDate(type: string, event: MatDatepickerInputEvent<Date>) {
-    console.log(typeof event.target.value);
     this.date = moment(event.target.value).toDate();
     this.invalidDate = moment(this.date).isValid();
-    console.log(this.invalidDate);
-
   }
 
   getErrorMessage() {

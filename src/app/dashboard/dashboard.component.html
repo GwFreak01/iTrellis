@@ -6,13 +6,14 @@
       Order On:
       <mat-form-field>
         <input matInput
+               class="dateInput"
+               id="dateInput"
                [matDatepicker]="picker"
                placeholder="Choose a date" [value]="date" [formControl]="dateField" (dateChange)="setSelectedDate('change', $event)">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker ></mat-datepicker>
         <mat-error *ngIf="invalidDate">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
-      <!--<h1 class="inventoryLabel mat-h1">Inventory</h1>-->
       <div class="inventorySection">
         <app-inventory-table [date]="date"></app-inventory-table>
       </div>
